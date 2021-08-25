@@ -8,7 +8,7 @@ Ansible role to maintain the auditd config and rules on Red Hat Linux systems. T
 
 This role was developed and tested on a Mint 20.2 system using [Molecule 3](https://molecule.readthedocs.io/en/latest/) with the Docker driver and Red Hat 7 and 8 containers from [Red Hat's Container Registry](https://catalog.redhat.com/software/containers/explore). A simple Dockerfile and configuration are included.
 
-(Note that to access non-UBI packages like audit, your containers must be deployed on a Red Hat platform with a valid subscription.)
+(Note that to access non-UBI packages like audit your containers must be deployed on a Red Hat platform with a valid subscription.)
 
 Molecule 3 changed the default verifier to Ansible (from testinfra). A basic test setup for Molecule 3 is included as well.
 
