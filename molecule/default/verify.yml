@@ -1,0 +1,13 @@
+---
+- name: Verify
+  hosts: all
+
+  tasks:
+    - name: Check for auditd rules file
+      stat:
+        path: /etc/audit/rules.d/audit.rules
+      register: auditrules_present
+
+    - name: Assert that auditd rules file exists 
+      assert:
+        that: auditrules_present is defined

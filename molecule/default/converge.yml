@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: Include auditd
+      include_role:
+        name: ansible-auditd-redhat

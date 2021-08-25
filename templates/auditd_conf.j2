@@ -1,0 +1,6 @@
+# 
+# {{ ansible_managed }}
+#
+{% for key, value in auditd_config_items.items() -%}
+  {{ key }} = {{ value }}
+{% endfor %}

@@ -1,0 +1,28 @@
+# Creates and maintains the auditd config and rules for RHEL 7 and 8
+---
+- name: Install audit
+  package:
+    name: audit
+    state: present
+  tags:
+    - auditd
+
+- name: Configure the auditd config file
+  template:
+    src: auditd_conf.j2
+    dest: /etc/audit/auditd.conf
+    owner: root
+    group: root
+    mode: 0644
+  tags:
+    - auditd
+
+- name: Configure the auditd rules file
+  template:
+    src: auditd_rules.j2
+    dest: /etc/audit/rules.d/audit.rules
+    owner: root
+    group: root
+    mode: 0644
+  tags:
+    - auditd
